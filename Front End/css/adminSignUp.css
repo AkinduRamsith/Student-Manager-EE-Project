@@ -1,0 +1,119 @@
+html{
+    background-color: #ea1538;
+}
+.welcome-1{
+   
+    margin: 0px;
+    width: 100vw;
+    height: 15vh;
+
+   
+}
+
+.img1{
+    position: absolute;
+    width: 420px;
+    height: 300px;
+   margin-left: 400px;
+   margin-top: -60px;
+    background-image: url("/profiles/vecteezy_man-entering-security-password_4689193.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.nav-sign-in1{
+    color: #ea1538;
+    background: white;
+}
+.regi{
+    display: flex;
+   
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 75vw;
+    height: 80vh;
+    position: relative;
+
+    text-align: center;
+    border-radius: 10px;
+}
+
+.regi-1{
+    display: flex;
+    float: left;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left:4%;
+    padding: 10px 20px;
+    margin: 20px;
+    transform:translate(-50% -50%);
+}
+
+.regi h1{
+    position: absolute;
+    top: 20%;
+    left: 80px;
+   
+}
+.regi-1 input{
+    width: 300px;
+    height: 25px;
+    left: 0;
+    outline: none;
+}
+.regi-1 .lblUser{
+    position: absolute;
+    width: 60px;
+    margin-top: 13px;
+    font-size: 10px;
+    text-transform:uppercase;
+    left: 0;
+}
+.regi-1 .lblEmail{
+    position: absolute;
+    font-size: 10px;
+    margin-top:65px;
+    text-transform:uppercase;
+    left: 0;
+}
+.regi-1 .lblPassword{
+    position: absolute;
+    margin-top:115px;
+    font-size: 10px;
+    text-transform:uppercase;
+    left: 0;
+}
+
+.regi-1 .input-user{
+    position: absolute;
+    margin-top: 30px;
+}
+.regi-1 .input-email{
+    position: absolute;
+    margin-top: 82px;
+}
+.regi-1 .input-password{
+    position: absolute;
+    margin-top: 130px;
+}
+
+.btn-signUpReg{
+    margin-left: 160px;
+    margin-top: 250px;
+    background:  #ea1538;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 25px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+
+.btn-signUpReg:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
