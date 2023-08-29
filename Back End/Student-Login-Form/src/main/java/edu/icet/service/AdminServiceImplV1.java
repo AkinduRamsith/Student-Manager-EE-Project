@@ -24,6 +24,11 @@ public class AdminServiceImplV1 implements AdminService{
 
     }
 
+    @Override
+    public boolean getAdminByUserName(String userName, String password) {
+        return adminRepository.findByUserNameAndPassword(userName, password) != null ? true : false;
+    }
+
     private boolean validateAdmin(Admin admin){
         if(admin.getAdminName()==null || admin.getAdminEmail()==null || admin.getAdminPassword()==null){
             System.out.println("Hellow");

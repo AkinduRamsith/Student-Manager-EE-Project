@@ -4,4 +4,6 @@ import edu.icet.dto.Admin;
 
 public interface AdminService {
     void saveAdmin(Admin admin);
+
+    boolean getAdminByUserName(String userName, String password);
 }

@@ -7,7 +7,7 @@ btnLogin.addEventListener("click", ()=>{
     let pass=password.value;
     // window.open("../student.html","_top");
     console.log(user,pass);
-    fetch(`http://localhost:8080/student/${user}/${pass}`)
+    fetch(`http://localhost:8080/admin/${user}/${pass}`)
     .then(response=> response.json())
     .then(res=>{
        if(res==true){

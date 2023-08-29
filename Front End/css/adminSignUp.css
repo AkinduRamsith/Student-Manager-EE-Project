@@ -37,7 +37,7 @@ html{
     position: relative;
 
     text-align: center;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 .regi-1{
@@ -54,8 +54,8 @@ html{
 
 .regi h1{
     position: absolute;
-    top: 20%;
-    left: 80px;
+    top: 15%;
+    left: 60px;
    
 }
 .regi-1 input{
@@ -101,8 +101,9 @@ html{
 }
 
 .btn-signUpReg{
+    /* position: absolute; */
     margin-left: 160px;
-    margin-top: 250px;
+    margin-top: 220px;
     background:  #ea1538;
     color: white;
     border-radius: 30px;
@@ -116,4 +117,38 @@ html{
 .btn-signUpReg:hover{
     transform: scale(.9);
     cursor: pointer;
+}
+
+
+.regi-1 p{
+    font-size: 20px;
+    position: absolute;
+    top: 78%;
+    left: 44%;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.fa-logo{
+    position: absolute;
+    top: 83%;
+    left: 0;
+}
+
+.fa-editgoog, .fa-editface , .fa-edittwi {
+    border:1px solid #ea1538;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.fa-editeye{
+    position: absolute;
+    top: 52%;
+    left: 90%;
+   opacity: 70%;
+   cursor: pointer;
+}
+
+.slash-eye{
+    visibility: hidden;
 }

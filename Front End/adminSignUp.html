@@ -6,13 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/adminSignUp.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body><div class="welcome-1">
     <div class="navbar-e">
         <nav>
             <h3 class="logo">Student <span class="nav-span">Manager</span></h3>
             <ul>
-                <li><a href="">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a href="/index.html#sec-dis">Discover</a></li>
                 <li><a href="">Contact Us</a></li>
             </ul>
@@ -29,19 +30,28 @@
        
         <div class="regi-1">
             <label class="lblUser" for="">User Name</label>
-            <input class="input-user" type="text" name="" id="">
+            <input class="input-user" type="text" name="" id="userName-ad">
             <label class="lblEmail" for="">Email</label>
-            <input class="input-email" type="email" name="" id="">
+            <input class="input-email" type="email" name="" id="email-ad">
             <label class="lblPassword" for="">Password</label>
-            <input class="input-password" type="password" name="" id="">
+            <input class="input-password" type="password" id="password-ad" name="" >
+            <i class="fa-solid fa-eye fa-editeye open-eye" id="show-password" style="color: #ea1538;"></i>
+            <i class="fa-solid fa-eye-slash fa-editeye slash-eye" id="hide-password" style="color: #ea1538;"></i>
+            <div class="fa-logo">
+                <i class="fa-brands fa-google fa-editgoog" style="color: #ea1538;"></i>
+                <i class="fa-brands fa-facebook-f fa-editface" style="color: #ea1538;"></i>
+                <i class="fa-brands fa-x-twitter fa-edittwi" style="color: #f00f1b;"></i>
+            </div>
+           
+            <p>or</p>
             <div class="img1">
                 
             </div>
-            <button type="submit" class="btn-signUpReg">Register</button>
+            <button type="submit" class="btn-signUpReg" id="admin-reg">Register</button>
         </div>
         
       
     </div>
-   
+   <script src="js/adminSignUp.js"></script>
 </body>
 </html>

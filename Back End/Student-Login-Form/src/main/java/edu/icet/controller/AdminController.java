@@ -16,4 +16,9 @@ public class AdminController {
         adminService.saveAdmin(admin);
     }
 
+    @GetMapping("/{userName}/{password}")
+    public boolean getAdminByUserName(@PathVariable String userName,@PathVariable String password){
+        return adminService.getAdminByUserName(userName,password);
+    }
+
 }
