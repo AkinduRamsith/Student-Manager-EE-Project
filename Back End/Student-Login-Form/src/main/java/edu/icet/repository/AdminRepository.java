@@ -4,5 +4,5 @@ import edu.icet.dao.AdminEntity;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AdminRepository extends CrudRepository<AdminEntity,Long> {
-    AdminEntity findByUserNameAndPassword(String userName, String password);
+    AdminEntity findByAdminNameAndAdminPassword(String adminName, String adminPassword);
 }

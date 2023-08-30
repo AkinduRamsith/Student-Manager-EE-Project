@@ -25,8 +25,8 @@ public class AdminServiceImplV1 implements AdminService{
     }
 
     @Override
-    public boolean getAdminByUserName(String userName, String password) {
-        return adminRepository.findByUserNameAndPassword(userName, password) != null ? true : false;
+    public boolean getAdminByUserName(String adminName, String adminPassword) {
+        return adminRepository.findByAdminNameAndAdminPassword(adminName, adminPassword) != null ? true : false;
     }
 
     private boolean validateAdmin(Admin admin){

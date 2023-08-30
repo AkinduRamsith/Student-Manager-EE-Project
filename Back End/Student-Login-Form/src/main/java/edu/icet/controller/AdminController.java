@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 @RequestMapping("/admin")
 public class AdminController {
-    @Autowired(required = true)
+    @Autowired
     AdminService adminService;
     @PostMapping
     public void saveAdmin(@RequestBody Admin admin){
         adminService.saveAdmin(admin);
     }
 
-    @GetMapping("/{userName}/{password}")
-    public boolean getAdminByUserName(@PathVariable String userName,@PathVariable String password){
-        return adminService.getAdminByUserName(userName,password);
+    @GetMapping("/{adminName}/{adminPassword}")
+    public boolean getAdminByUserName(@PathVariable String adminName,@PathVariable String adminPassword){
+        return adminService.getAdminByUserName(adminName,adminPassword);
     }
 
 }

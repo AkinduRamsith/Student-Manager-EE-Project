@@ -1,190 +1,91 @@
-body {
-    font-family: "Muli-Regular";
-    color: #666;
-    font-size: 13px;
+*{
     margin: 0;
-    background:url("/resou/clark-van-der-beken-mcCAFvlzZFQ-unsplash.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-}
-
-  
-  input, textarea, select, button {
-    font-family: "Muli-Regular";
-    color: #131111;
-    font-size: 13px; 
-  }
-  .wrapper {
-    min-height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center; 
-}
-.container-1{
-    min-width: 850px;
-    margin: auto;
-    padding-top: 68px;
-    padding-bottom: 40px;
-    color: #141313;
-    
-    background: url("/resou/matese-fields-pvHma684eEI-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 90%;
-    border-radius: 10px;
-}
- .container-1 h3{
-    margin-top: -20px;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-family: "Muli-Bold";
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
-    letter-spacing: 2px;
-}
-
-form {
-    width: 50%;
-    padding-left: 45x; 
-}
-
-.form-1{
-    display: flex;
-}
-  .form-1 .form-2{
-    width: 50%;
-  }
-   .form-1 .form-2:first-child{
-    margin-right: 20px;
-   }
-    
-.text-edit{
-    border: 1px solid #ccc;
-    padding: 0px 20px;
-    margin: 0px 0px 10px 20px;
-    width: 86%;
-    height: 40px;
-    display: block;
-    border-radius: 20px;
-    font-family: "Muli-Bold";
-    background: none;  
-    outline: none;
-    font-weight: bold;
-}
- .text-edit:focus{
-    border: 1px solid #ae3c33;
- }
-
-.btn-SignUp{
-    /* margin-left: 200px;
-    margin-top: 10px;
-    padding: 5px;
-    width: 100px;
-    border-radius: 4px;
-    font-family: monospace ; */
-
-    border: none;
-  width: 152px;
-  height: 40px;
-  margin: auto;
-  margin-top: 29px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  background:#768b9b;
-  font-size: 13px;
-  color: #fff;
-  text-transform: uppercase;
-  font-family: "Muli-SemiBold";
-  border-radius: 20px;
-  overflow: hidden;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s; 
-}
-
-.btn-SignUp::before{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #37698f;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    
-    transform-origin: 0 50%;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out; 
-}
-.btn-SignUp:hover:before{
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-}
-
-/* .btn-edit{
-    background-color: rgb(241, 241, 248);
-    color: #9cd095 ;
-    border-color: rgb(242, 242, 245);
-} */
-.genderM{
-    margin-left: 50px;
+    padding: 0;
     
    
 }
 
-/* .btn-edit:hover{
-    background-color:#9cd095;
-    color:rgb(241, 241, 248) ;
-} */
-
-.text-edit:hover{
-    border-style: hidden hidden groove hidden ;
-    border-color: black;
+.page{
+    /* border: 1px solid black; */
+    position: absolute;
+    margin: 50px 0  0 60px ;
+    height: 200vh;
+    width: 90%;
+   
+    background-color: rgb(246, 244, 241);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
 }
-
-
-/* @media (max-width: 767px) {
-    .container-1 {
-      min-width: auto;
-      background: none;
-      padding-top: 0;
-      padding-bottom: 0; }
-  
-    form {
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px; } } */
-.form-4{
-    margin: 10px 0px 15px 25px ;
-    padding: auto;
-    border-radius: 3px;
+.page .wrapper{
+    align-items: center;
 }
-
-.container-1 p{
-    margin-left: 25px;
-    padding: auto;
+.page h2{
+    font-size: 3rem;
+    position: relative;
+    margin-left: 28px;
     margin-top: 10px;
-    font-size:15px;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: red;
 }
-.last:hover{
-    color: #f11a09;
-    font-weight: 500;
+
+.wrapper{
+    border: 1px solid black;
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.con-studentD{
+    position: absolute;
+    /* margin-top: 25px; */
+    /* margin-left: 10px; */
+    /* margin-right: 5px; */
+}
+
+.title{
+    width: 40%;
+    border: 1px solid black;
+    /* border-style: hidden solid  solid hidden; */
+    
+}
+
+.title-edit{
+    height:400px;
+}
+
+.title h3{
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.detail{
+    width: 100%;
+    height: 400px;
+    border: 1px solid black;
+    border-style: hidden hidden  solid hidden;
+    display: block;
+    
+}
+.div-name{
+    
+}
+
+
