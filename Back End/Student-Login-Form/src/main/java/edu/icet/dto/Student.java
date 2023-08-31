@@ -13,15 +13,24 @@ public class Student {
     private Long id;
     private String firstName;
     private String lastName;
-    private String age;
+    private String nic;
     private String phoneNumber;
+    private String age;
     private String email;
-    private String address;
-    private String institute;
-    private String batch;
+    private String streetAddress;
+    private String province;
+    private String district;
     private String gender;
-    private String userName;
-    private String password;
+    private String courseType;
+    private String course;
+    private String schoolName;
+    private String schoolYear;
+    private String stream;
+    private String motherName;
+    private String motherPhoneNumber;
+    private String fatherName;
+    private String fatherPhoneNumber;
+
 
     public void setFirstName(String firstName){
         if(firstName.isBlank())return;
@@ -35,6 +44,10 @@ public class Student {
         if (age != null && !age.isBlank() && Integer.parseInt(age) >= 10) {
             this.age = age;
         }
+    }
+    private void setNic(String nic){
+        if(nic.isBlank())return;
+        this.nic=nic;
     }
 
     public void setPhoneNumber(String phoneNumber) {
@@ -53,19 +66,19 @@ public class Student {
         this.email=email;
     }
 
-    public void setAddress(String address){
-        if(address.isBlank())return;
-        this.address=address;
+    public void setStreetAddress(String streetAddress){
+        if(streetAddress.isBlank())return;
+        this.streetAddress=streetAddress;
     }
 
-    public void setInstitute(String institute){
-        if(institute.isBlank())return;
-        this.institute=institute;
+    public void setProvince(String province){
+        if(province.isBlank())return;
+        this.province=province;
     }
 
-    public void setBatch(String batch){
-        if(batch.isBlank())return;
-        this.batch=batch;
+    public void setDistrict(String district){
+        if(district.isBlank())return;
+        this.district=district;
     }
 
     public void setGender(String gender) {
@@ -74,18 +87,77 @@ public class Student {
         }
         this.gender = gender;
     }
-    public void setUserName(String userName){
-        if(userName==null || userName.isBlank()){
+    public void setCourseType(String courseType){
+        if(courseType==null || courseType.isBlank()){
             return;
         }
-        this.userName=userName;
+        this.courseType=courseType;
     }
-    public void setPassword(String password){
-        if(password==null || password.isBlank() ){
+    public void setSchoolName(String schoolName){
+        if(schoolName==null || schoolName.isBlank() ){
             return;
         }
-        this.password=password;
+        this.schoolName=schoolName;
     }
+    public void setSchoolYear(String schoolYear){
+        if(schoolYear==null || schoolYear.isBlank() ){
+            return;
+        }
+        this.schoolYear=schoolYear;
+    }
+    public void setStream(String stream){
+        if(stream==null || stream.isBlank() ){
+            return;
+        }
+        this.stream=stream;
+    }
+    public void setCourse(String course){
+        if(course==null || course.isBlank() ){
+            return;
+        }
+        this.course=course;
+    }
+
+    public void setMotherName(String motherName){
+        if(motherName==null || motherName.isBlank() ){
+            return;
+        }
+        this.motherName=motherName;
+    }
+
+
+    public void setMotherPhoneNumber(String motherPhoneNumber){
+        if (motherPhoneNumber == null) {
+            this.motherPhoneNumber = null;
+            return;
+        }
+        if (motherPhoneNumber.length() == 10 && motherPhoneNumber.startsWith("0")) {
+            this.motherPhoneNumber = motherPhoneNumber;
+        } else {
+            this.motherPhoneNumber = null;
+        }
+    }
+
+    public void setFatherName(String fatherName){
+        if(fatherName==null || fatherName.isBlank() ){
+            return;
+        }
+        this.fatherName=fatherName;
+    }
+
+
+    public void setFatherPhoneNumber(String fatherPhoneNumber){
+        if (fatherPhoneNumber == null) {
+            this.fatherPhoneNumber = null;
+            return;
+        }
+        if (fatherPhoneNumber.length() == 10 && fatherPhoneNumber.startsWith("0")) {
+            this.fatherPhoneNumber = fatherPhoneNumber;
+        } else {
+            this.fatherPhoneNumber = null;
+        }
+    }
+
 
 
 

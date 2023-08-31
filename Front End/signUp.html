@@ -1,14 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
+
 <body>
-    <div class="welcome-1">
+    <div class="welcome-1 nav-wel">
         <div class="navbar-e">
             <nav id="navbar">
                 <h3 class="logo"><span class="nav-span1">Student</span> <span class="nav-span">Manager</span></h3>
@@ -17,55 +19,173 @@
                     <li><a href="./student.html">Students</a></li>
                     <li><a href="./signUp.html">Register</a></li>
                 </ul>
-              
-               
-            
-              
+
+
+
+
             </nav>
         </div>
     </div>
-   
-<div class="page">
-    <h2>Register</h2>
-    <div class="wrapper">
-        <div class="container con-studentD">
-            <div class="title title-edit">
-                <h3>Student Details</h3>
-            </div>
-            <div class="detail">
-                <div class="div-name">
-                    <label for="">First Name</label>
-                    <input type="text" name="" id="">
 
-                    <label for="">Last Name</label>
-                    <input type="text" name="" id="">
+    <div class="page">
+        <h2>Register</h2>
+        <div class="wrapper">
+            <div class="container con-studentD">
+                <div class="title title-edit">
+                    <h3>Student Details</h3>
                 </div>
-               
+                <div class="detail">
+                    <div class="div-c">
+                        <label for="">First Name</label>
+                        <input type="text" name="" id="firstName">
 
-              
+                        <label for="">Last Name</label>
+                        <input type="text" name="" id="lastName">
+                    </div>
 
-                <label for="">NIC Number</label>
-                <input type="text" name="" id="">
+                    <div class="div-c">
 
-                <label for="">Phone Number</label>
-                <input type="tel" name="" id="">
+                        <label for="">NIC Number</label>
+                        <input type="text" name="" id="nic">
 
-                <label for="">Email</label>
-                <input type="email" name="" id="">
+                        <label for="">Phone Number</label>
+                        <input type="tel" name="" id="phoneNumber">
+                    </div>
 
-                <label for="">Age</label>
-                <input type="text" name="" id="">
+                    <div>
 
-                <label for="">Address</label>
-                <input type="text" name="" id="">
 
-                <input type="file" name="" id="">
+
+                    </div>
+
+                    <label class="lbl-SAge" for="">Age</label>
+                    <input class="txt-SAge" type="text" name="age" id="age">
+
+                    <label class="lbl-SEmail" for="">Email</label>
+                    <input class="txt-SEmail" type="text" name="" id="email">
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label class="lbl-address" for="">Address </label>
+
+                    <br>
+                    <label class="lbl-StreetAddress" for="">Street Address</label>
+                    <input class="txt-StreetAddress" type="text" name="" id="street-address">
+                    <br>
+
+                    <label for="" class="lbl-province">Province</label>
+                    <input type="text" name="" id="province" class="txt-province">
+
+                    <label for="" class="lbl-district">District</label>
+                    <input type="text" name="" id="district" class="txt-district">
+
+                    <input type="radio" placeholder="" id="male" name="gender" class="genderM" value="Male">Male
+                    <input type="radio" placeholder="" id="female" name="gender" class="gender" value="Female">Female<br>
+
+                    <input class="txt-file" type="file" name="" id="">
+                </div>
+
+
             </div>
-        </div>
-    </div>
-</div>
-    
 
-    <script src=""></script>
+            <div class="container container-add">
+                <div class="title title-ad">
+                    <h3>Addmission Type</h3>
+                </div>
+
+                <div class="detail detail-ad">
+                    <label class="lbl-cou" for="">Course Type</label>
+                    <label class="lbl-full" for="">Full Time</label>
+                    <input class="type-r" type="radio" name="type" id="" value="Full Time">
+                    <label class="lbl-part" for="">Part Time</label>
+                    <input class="type-rp" type="radio" name="type" id="" value="Part Time">
+
+                    <label class="lbl-cour" for="">Course Applied For</label>
+                    <select name="" id="combo-sel" class="combo">
+                        <option value="ICD">ICD</option>
+                        <option value="ICM">ICM</option>
+                        <option value="ICP">ICP</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="container container-school">
+
+                <div class="title title-school">
+                    <h3>High School Education</h3>
+                </div>
+
+                <div class="detail detail-school">
+                    <div class="div-c">
+                        <label class="lbl-schoolName" for="">School Name</label>
+                        <input class="txt-schoolName" type="text" name="" id="txtSchoolName">
+
+                        <label for="" class="lbl-schoolYear">Year Graduated</label>
+                        <input type="text" id="txtSchoolYear" class="txt-schoolYear">
+                    </div>
+
+                    <label for="" class="lbl-stream">Stream</label>
+                    <select name="" id="comboStream" class="combo-stream">
+                        <option value="Math">Math</option>
+                        <option value="Science">Science</option>
+                        <option value="Technology">Technology</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="container container-parent">
+
+                <div class="title title-parent">
+                    <h3>Parent Details</h3>
+                </div>
+
+                <div class="detail detail-parent">
+                    <div class="div-c">
+                        <label class="lblmother" for="">Mother's Name</label>
+                        <input type="text" name="" id="txt-Mother" class="txtMother">
+
+                        <lable class="lbl-motherN">Mother's PhoneNumber</lable>
+                        <input type="text" name="" id="txt-MotherN" class="txt-motherN">
+
+                    </div>
+
+                    <div class="div-c">
+                        <label class="lblfather" for="">Father's Name</label>
+                        <input type="text" name="" id="txt-Father" class="txtMother">
+
+                        <lable class="lbl-fatherN">Father's PhoneNumber</lable>
+                        <input type="text" name="" id="txt-FatherN" class="txt-fatherN">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <button id="btn-RegSt" class="btn-RegS">Register</button>
+    </div>
+
+
+    <!-- Addmission type -->
+
+    <!-- <div class="container-addmission con-add">
+        <div class="title-ad">
+            <h3>Addmission Type</h3>
+        </div>
+           
+        <div class="detail-ad">
+            <label for="">Course Type</label>
+            <label for="">Full Time</label>
+            <input class="type-r" type="radio" name="type" id="" >
+
+            <hr>
+        </div>
+    </div> -->
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>

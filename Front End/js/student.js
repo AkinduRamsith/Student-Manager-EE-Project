@@ -5,25 +5,23 @@ function getStudent(){
     .then(response => response.json())
     .then(res => {
         let tblBody = ` <tr>
-        <td>Stuent ID</td>
-        <td>First Name</td>
-        <td>Last Name</td>
-        <td>Address</td>
-        <td>Institute</td>
-        <td>Batch</td>
-        <td>Email</td>
+        <th>Stuent ID</th>
+        <th>Student Name</th>
+        <th>Address</th>
+        <th>Age</th>
+        <th>Course Type</th>
+        <th>Course</th>
     </tr>`  
 
         res.forEach(element => {
             tblBody += `
             <tr>
             <td> <button>${element.id}</button></td>
-            <td>${element.firstName}</td>
-            <td>${element.lastName}</td>
-            <td>${element.address}</td>
-            <td>${element.institute}</td>
-            <td>${element.batch}</td>
-            <td>${element.email}</td>
+            <td>${element.firstName}${" "}${element.lastName}</td>
+            <td>${element.streetAddress}${","}${element.district}</td>
+            <td>${element.age}</td>
+            <td>${element.courseType}</td>
+            <td>${element.course}</td>
         </tr>`;
         });
         studentTable.innerHTML = tblBody;

@@ -24,6 +24,11 @@ btnReg.addEventListener("click",()=>{
     .then(data =>{
         
     })
+    userName.value="";
+    email.value="";
+    passwordField.value="";
+    
+
 })
 
 

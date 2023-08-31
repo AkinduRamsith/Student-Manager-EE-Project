@@ -28,10 +28,10 @@ public class StudentController {
     public List<Student> getStudents(){
         return studentService.getStudents();
     }
-    @GetMapping("/{userName}/{password}")
-    public boolean getStudentByUserName(@PathVariable String userName,@PathVariable String password){
-        return studentService.getStudentByUserName(userName,password);
-    }
+//    @GetMapping("/{userName}/{password}")
+//    public boolean getStudentByUserName(@PathVariable String userName,@PathVariable String password){
+//        return studentService.getStudentByUserName(userName,password);
+//    }
 
     @DeleteMapping("/{id}")
     public boolean deleteStudent(@PathVariable String id){

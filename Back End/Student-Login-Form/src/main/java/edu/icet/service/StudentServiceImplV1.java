@@ -31,10 +31,11 @@ public class StudentServiceImplV1 implements StudentService {
 
     }
 
-    @Override
-    public boolean getStudentByUserName(String userName, String password) {
-        return studentRepository.findByUserNameAndPassword(userName, password) != null ? true : false;
-    }
+//    @Override
+//    public boolean getStudentByUserName(String userName, String password) {
+//        return studentRepository.findByUserNameAndPassword(userName, password) != null ? true : false;
+//    }
+
     @Override
     public List<Student> getStudents() {
         Iterable<StudentEntity> studentList = studentRepository.findAll();
@@ -46,13 +47,23 @@ public class StudentServiceImplV1 implements StudentService {
                     .id(entity.getId())
                     .firstName(entity.getFirstName())
                     .lastName(entity.getLastName())
-                    .age(entity.getAge())
+                    .nic(entity.getNic())
                     .phoneNumber(entity.getPhoneNumber())
+                    .age(entity.getAge())
                     .email(entity.getEmail())
-                    .address(entity.getAddress())
-                    .institute(entity.getInstitute())
-                    .batch(entity.getBatch())
+                    .streetAddress(entity.getStreetAddress())
+                    .province(entity.getProvince())
+                    .district(entity.getDistrict())
                     .gender(entity.getGender())
+                    .courseType(entity.getCourseType())
+                    .course(entity.getCourse())
+                    .schoolName(entity.getSchoolName())
+                    .schoolYear(entity.getSchoolYear())
+                    .stream(entity.getStream())
+                    .motherName(entity.getMotherName())
+                    .motherPhoneNumber(entity.getMotherPhoneNumber())
+                    .fatherName(entity.getFatherName())
+                    .fatherPhoneNumber(entity.getFatherPhoneNumber())
                     .build());
         }
         return studentModel;
@@ -60,24 +71,25 @@ public class StudentServiceImplV1 implements StudentService {
 
     @Override
     public boolean deleteStudent(Long id) {
-          studentRepository.deleteById(id);
-          return findById(id);
+        studentRepository.deleteById(id);
+        return findById(id);
     }
 
     @Override
-    public void updateStudent(Student student){
+    public void updateStudent(Student student) {
         boolean stu = validateStudent(student);
         if (stu) {
-            StudentEntity map = modelMapper.map(student,StudentEntity.class);
+            StudentEntity map = modelMapper.map(student, StudentEntity.class);
             studentRepository.save(map);
         }
     }
 
-    private boolean findById(Long id){
-        return studentRepository.findById(id)!=null ? true : false;
+    private boolean findById(Long id) {
+        return studentRepository.findById(id) != null ? true : false;
     }
+
     private boolean validateStudent(Student student) {
-        if (student.getAge() == null || student.getAge().isBlank() || student.getFirstName() == null || student.getFirstName().isBlank() || student.getPhoneNumber() == null || student.getPhoneNumber().isBlank() || student.getEmail() == null || student.getEmail().isBlank() || student.getAddress() == null || student.getAddress().isBlank() || student.getLastName() == null || student.getLastName().isBlank() || student.getBatch() == null || student.getBatch().isBlank() || student.getInstitute() == null || student.getInstitute().isBlank() || student.getGender() == null || student.getGender().isBlank() || student.getUserName() == null || student.getUserName().isBlank() || student.getPassword() == null || student.getPassword().isBlank()) {
+        if (student.getAge() == null || student.getAge().isBlank() || student.getFirstName() == null || student.getFirstName().isBlank() || student.getPhoneNumber() == null || student.getPhoneNumber().isBlank() || student.getEmail() == null || student.getEmail().isBlank() || student.getStreetAddress() == null || student.getStreetAddress().isBlank() || student.getLastName() == null || student.getLastName().isBlank() || student.getNic() == null || student.getNic().isBlank() || student.getProvince() == null || student.getProvince().isBlank() || student.getGender() == null || student.getGender().isBlank() || student.getDistrict() == null || student.getDistrict().isBlank() || student.getCourseType() == null || student.getCourseType().isBlank() || student.getCourse().isBlank() || student.getCourse() == null || student.getSchoolName().isBlank() || student.getSchoolName() == null || student.getSchoolYear().isBlank() || student.getSchoolYear() == null || student.getStream().isBlank() || student.getStream() == null || student.getMotherName().isBlank() || student.getMotherName() == null || student.getMotherPhoneNumber().isBlank() || student.getMotherPhoneNumber() == null || student.getFatherName().isBlank() || student.getFatherName() == null || student.getFatherPhoneNumber().isBlank() || student.getFatherPhoneNumber() == null) {
             System.out.println("Hello");
             return false;
         }

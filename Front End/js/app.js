@@ -1,16 +1,26 @@
 const firstName=document.getElementById("firstName");
 const lastName=document.getElementById("lastName");
+const nic=document.getElementById("nic");
 const age=document.getElementById("age");
 const phoneNumber=document.getElementById("phoneNumber");
 const email=document.getElementById("email");
-const address=document.getElementById("address");
-const institute=document.getElementById("institute");
-const batch=document.getElementById("batch");
-const gender = document.getElementsByName('gender');
-const userName=document.getElementById('userName');
-const password=document.getElementById('password');
+const streetAddress=document.getElementById("street-address");
+const province=document.getElementById("province");
+const district=document.getElementById("district");
+const comboCourse=document.querySelector("#combo-sel");
+const stream=document.querySelector("#comboStream");
+const schoolName=document.getElementById("txtSchoolName");
+const schoolYear=document.getElementById("txtSchoolYear");
+const motherName=document.getElementById("txt-Mother");
+const motherPhoneNumber=document.getElementById("txt-MotherN");
+const fatherName=document.getElementById("txt-Father");
+const fatherPhoneNumber=document.getElementById("txt-FatherN");
+const type=document.getElementsByName("type");
 
-const btnReg=document.getElementById("btn-Reg");
+const gender = document.getElementsByName('gender');
+
+
+const btnReg=document.getElementById("btn-RegSt");
 
 btnReg.addEventListener("click",()=>{
     let gen;
@@ -19,18 +29,38 @@ btnReg.addEventListener("click",()=>{
             
                  gen=gender[i].value;
     } 
+
+    let typeC;
+
+    for (let i = 0; i < type.length; i++) {
+        if (type[i].checked)
+            
+                 typeC=type[i].value;
+    } 
+    let ComboCou=comboCourse.value;
+    let comboStr=stream.value;
+
     let student={
         "firstName" : firstName.value,
         "lastName" : lastName.value,
-        "age" : age.value,
+        "nic" : nic.value,
         "phoneNumber" : phoneNumber.value,
+        "age" : age.value,
         "email" : email.value,
-        "address" : address.value,
-        "institute" : institute.value,
-        "batch" : batch.value,
+        "streetAddress" : streetAddress.value,
+        "province" : province.value,
+        "district" : district.value,
         "gender" :gen,
-        "userName" : userName.value,
-        "password" : password.value
+        "courseType" : typeC,
+        "course" : ComboCou,
+        "schoolName" : schoolName.value,
+        "schoolYear" : schoolYear.value,
+        "stream" : comboStr,
+        "motherName" : motherName.value,
+        "motherPhoneNumber" : motherPhoneNumber.value,
+        "fatherName" : fatherName.value,
+        "fatherPhoneNumber" : fatherPhoneNumber.value
+
     }
     console.log(student);  
 

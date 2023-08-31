@@ -1,8 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    
+    /* font-size: large; */
    
+}
+
+.nav-wel{
+    margin-top: 10px;
 }
 
 .page{
@@ -38,10 +42,10 @@
 
 .wrapper{
     border: 1px solid black;
-    width: 90%;
-    height: 100vh;
+    width: 80%;
+    height: auto;
     position: relative;
-    margin-left: 2rem;
+    margin-left: 8rem;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -55,15 +59,15 @@
 
 .con-studentD{
     position: absolute;
-    /* margin-top: 25px; */
-    /* margin-left: 10px; */
-    /* margin-right: 5px; */
+    /* margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 5px; */
 }
 
 .title{
-    width: 40%;
+    width:28vw;
     border: 1px solid black;
-    /* border-style: hidden solid  solid hidden; */
+    border-style: hidden solid  solid hidden;
     
 }
 
@@ -84,8 +88,380 @@
     display: block;
     
 }
-.div-name{
+.div-c{
+   
+margin-top: 30px;
+margin-left: 20px;
+margin-bottom: 10px;
+}
+
+.div-c label{
+    font-size: 1rem;
+    position: absolute;
+    font-family: monospace;
+    margin-top: -20px;
+}
+
+.div-c input{
+    border-radius: 3px;
+    width: 15rem;
+    height: 1.5rem;
+    margin-right: 25px
     
 }
 
+.div-idph{
+    margin-top: 30px;
+margin-left: 20px;
+margin-bottom: 10px;
+}
 
+.div-idph label{
+    font-size: 1rem;
+    position: absolute;
+    font-family: monospace;
+    margin-top: -20px;
+}
+
+.div-idph input{
+    border-radius: 3px;
+    width: 15rem;
+    height: 1.5rem;
+    margin-right: 25px
+}
+
+.lbl-SAge , .lbl-SEmail {
+    /* margin-top: 10px; */
+    margin-left: 20px;
+    /* margin-bottom: 20px; */
+    font-size: 1rem;
+    position: absolute;
+    font-family: monospace;
+    /* margin-top: -10px; */
+}
+
+.txt-SAge , .txt-SEmail{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    width: 15rem;
+    height: 1.5rem;
+    margin-right: 25px
+}
+
+.lbl-SEmail{
+    margin-left: -4px;
+}
+
+.txt-SEmail{
+    margin-left: -2px;
+}
+
+
+.lbl-address{
+    margin-top: 10px;
+    font-size: 1rem;
+    margin-left: 14px;
+    text-decoration: underline;
+    font-family: monospace;
+}
+
+.lbl-StreetAddress{
+    margin-top: 5px;
+    margin-left: 20px;
+    /* margin-bottom: 20px; */
+    font-size: 1rem;
+    position: absolute;
+    font-family: monospace;
+    /* margin-top: -10px; */
+}
+
+.txt-StreetAddress{
+    margin-top: 26px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    width: 31.8rem;
+    height: 1.5rem;
+    margin-right: 25px
+}
+
+.lbl-province , .lbl-district{
+      /* margin-top: 10px; */
+      margin-left: 20px;
+      /* margin-bottom: 20px; */
+      font-size: 1rem;
+      position: absolute;
+      font-family: monospace;
+      /* margin-top: -10px; */
+}
+
+.txt-province ,.txt-district{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    width: 15rem;
+    height: 1.5rem;
+    margin-right: 18px
+}
+
+.genderM{
+    margin-left: 100px;
+}
+.txt-file{
+    margin-left: 11px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* addmission */
+
+.container-addmission{
+    display: flex;
+    flex-direction: row;
+}
+
+.con-add{
+    position: absolute;
+    
+}
+
+.title-ad{
+    width:20.2vw;
+    border: 1px solid black;
+    border-style: hidden solid  solid hidden;
+    margin-top: 64.2vh;
+    /* margin-left: 187px; */
+    height: 200px;
+}
+
+.detail-ad{
+    width: 50.9vw;
+    height: 200px;
+    /* border: 1px solid black;
+    border-style: hidden hidden  solid hidden; */
+    /* display: block; */
+    margin-top: 64.2vh;
+    /* margin-left: 18px; */
+}
+
+
+.title-ad h3{
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.detail-ad .lbl-cou{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.detail-ad .lbl-full{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.detail-ad .type-r{
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 90px;
+}
+.detail-ad .lbl-part{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 120px;
+}
+.detail-ad .type-rp{
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 190px;
+}
+
+.lbl-cour{
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 10px;
+    
+}
+.combo{
+    padding: 5px;
+    width: 80px;
+    position: absolute;
+    margin-top: 92px;
+    margin-left: 145px;
+}
+
+.combo option{
+    padding: 10px;
+}
+
+
+/* High School */
+
+
+
+
+.container-school{
+    
+    position: relative;
+    
+}
+
+.title-school{
+    width:20.2vw;
+    border: 1px solid black;
+    border-style: hidden solid  solid hidden;
+    /* margin-top: 96.9vh; */
+    /* margin-left: 187px; */
+    height: 200px;
+}
+
+.detail-school{
+    width: 50.9vw;
+    height: 200px;
+    /* border: 1px solid black;
+    border-style: hidden hidden  solid hidden; */
+    /* display: block; */
+    /* margin-top: 96.9vh; */
+    /* margin-left: 18px; */
+}
+
+
+.title-school h3{
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.div-c .txt-schoolName{
+
+ width: 25rem;
+}
+
+
+.div-c .txt-schoolYear{
+    width: 5rem;
+   
+}
+
+.lbl-stream{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+    
+}
+
+.combo-stream{
+    padding: 5px;
+    width: 80px;
+    position: absolute;
+    margin-top:30px;
+    margin-left: 90px;
+}
+
+/* Parent */
+
+.container-parent{
+    
+    position: relative;
+    
+}
+
+.title-parent{
+    width:20.2vw;
+    border: 1px solid black;
+    border-style: hidden solid  solid hidden;
+    /* margin-top: 96.9vh; */
+    /* margin-left: 187px; */
+    height: 200px;
+}
+
+.detail-parent{
+    width: 50.9vw;
+    height: 200px;
+    /* border: 1px solid black;
+    border-style: hidden hidden  solid hidden; */
+    /* display: block; */
+    /* margin-top: 96.9vh; */
+    /* margin-left: 18px; */
+}
+
+
+.title-parent h3{
+    margin-top: 3rem;
+    margin-left: 2rem;
+}
+
+.div-c .lbl-motherN{
+    font-size: 1rem;
+    position: absolute;
+    font-family: monospace;
+    /* margin-left: 250px; */
+    margin-top: -20px;
+}
+.div-c .lbl-fatherN{
+    font-size: 1rem;
+    position: absolute;
+    font-family: monospace;
+    /* margin-left: 250px; */
+    margin-top: -20px;
+}
+
+/* Button Register */
+
+.btn-RegS{
+    border-style: hidden;
+   margin-top: 1rem;
+    margin-left: 150px;
+    width: 100px;
+    padding: 8px;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #0d324e;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+   
+}
+
+.btn-RegS::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(2, 109, 109);
+    border-radius: 4px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; 
+}
+
+
+
+
+
+
+
+.btn-RegS:hover:before{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    
+    
+}
