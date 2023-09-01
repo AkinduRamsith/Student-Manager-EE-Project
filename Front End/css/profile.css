@@ -1,0 +1,72 @@
+.profile{
+   margin-bottom: 5%;
+   padding: 1%;
+    border: 1px solid black;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+   
+
+}
+.profile hr{
+    margin-top: 0%;
+    
+}
+.hr-edit{
+    z-index: 0;
+}
+
+form{
+    margin-top: 5%;
+}
+.profile-edit{
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.img{
+    
+    background-image: url("../resou/clark-van-der-beken-mcCAFvlzZFQ-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+   
+    border-radius: 50%;
+    padding: 1%;
+    
+}
+.image{
+    background-color: rebeccapurple;
+    
+    
+}
+.img-edit{
+    width: 100px;
+    height: 100px;
+    margin-left: 4%;
+    margin-right: 80%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.txt-file1{
+    padding: 2%;
+}
+
+.profile button{
+    margin-left: 10%;
+    margin-bottom: 2%;
+    width: 10%;
+    padding: 1%;
+    border-radius: 15%;
+    border: none;
+   
+}
+
+
+
