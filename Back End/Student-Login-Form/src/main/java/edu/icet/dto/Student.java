@@ -45,10 +45,12 @@ public class Student {
             this.age = age;
         }
     }
-    private void setNic(String nic){
-        if(nic.isBlank())return;
-        this.nic=nic;
+    public void setNic(String nic){
+        this.nic = nic;
     }
+
+
+
 
     public void setPhoneNumber(String phoneNumber) {
         if (phoneNumber == null) {

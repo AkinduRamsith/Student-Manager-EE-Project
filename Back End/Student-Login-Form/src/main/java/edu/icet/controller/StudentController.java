@@ -2,6 +2,7 @@ package edu.icet.controller;
 
 import edu.icet.dto.Student;
 import edu.icet.service.StudentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
+@Slf4j
 @RequestMapping("/student")
 public class StudentController {
     @Autowired
@@ -23,7 +25,12 @@ public class StudentController {
         studentService.saveStudent(student);
     }
 
-
+    @GetMapping("/{id}")
+    public Student getStudentById(@PathVariable String id){
+        Student studentById = studentService.getStudentById(Long.valueOf(id));
+        log.debug(String.valueOf(studentById));
+        return studentById;
+    }
     @GetMapping
     public List<Student> getStudents(){
         return studentService.getStudents();

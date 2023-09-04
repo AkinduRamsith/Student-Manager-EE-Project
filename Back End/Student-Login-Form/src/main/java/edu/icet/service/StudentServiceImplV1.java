@@ -5,6 +5,7 @@ import edu.icet.dto.Student;
 import edu.icet.repository.StudentRepository;
 
 import jakarta.transaction.Transactional;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,9 +13,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Transactional
+@Slf4j
 public class StudentServiceImplV1 implements StudentService {
     @Autowired
     StudentRepository studentRepository;
@@ -72,7 +75,7 @@ public class StudentServiceImplV1 implements StudentService {
     @Override
     public boolean deleteStudent(Long id) {
         studentRepository.deleteById(id);
-        return findById(id);
+        return findBySId(id);
     }
 
     @Override
@@ -84,7 +87,14 @@ public class StudentServiceImplV1 implements StudentService {
         }
     }
 
-    private boolean findById(Long id) {
+    @Override
+    public Student getStudentById(Long id) {
+        Optional<StudentEntity> byId = studentRepository.findById(id);
+        log.debug(String.valueOf(byId));
+        return modelMapper.map(byId,Student.class);
+    }
+
+    private boolean findBySId(Long id) {
         return studentRepository.findById(id) != null ? true : false;
     }
 

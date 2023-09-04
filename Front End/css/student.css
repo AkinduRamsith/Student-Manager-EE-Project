@@ -26,4 +26,606 @@ tr button{
     color: white;
     width: 70px;
     padding: 10px;
+    cursor: pointer;
 }
+
+
+/* ------------------------------------------------------- */
+
+.profile {
+    margin-bottom: 5%;
+    padding: 1%;
+    border: 1px solid black;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 15%;
+}
+
+.profile-edit {
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+
+}
+
+.div-d span {
+    color: red;
+    text-decoration: underline rgb(245, 245, 245);
+}
+
+.image {
+    padding: 17%;
+    /* border: 1px solid black; */
+    background-color: rgb(245, 245, 245);
+    margin-left: 5%;
+    margin-right: 80%;
+    margin-top: 4%;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.img {
+
+    background-image: url("../resou/matese-fields-pvHma684eEI-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 50%;
+    /* padding: 1%; */
+
+}
+
+.img-edit {
+    width: 13vw;
+    height: 25vh;
+    margin-left: -7%;
+    margin-right: 80%;
+    margin-top: -15%;
+    margin-bottom: 3%;
+    border: none;
+
+}
+
+hr {
+    width: 20%;
+    background-color: black;
+    position: absolute;
+    margin-top: -1%;
+    margin-left: -10%;
+}
+
+.para-name {
+    margin-top: -1%;
+    margin-left: -7%;
+    position: absolute;
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+
+
+.stu-detail {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 25%;
+    /* border: 1px solid black; */
+    background-color: rgb(245, 245, 245);
+    margin-left: 44%;
+    margin-right: 80%;
+    margin-top: -34%;
+    padding-bottom: 40%;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.stu-detail2 {
+    padding: 17%;
+    /* border: 1px solid black; */
+    background-color: rgb(245, 245, 245);
+    margin-left: 5%;
+    margin-right: 80%;
+    margin-top: -42%;
+    border-radius: 20px;
+    /* margin-bottom: 5%; */
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.div-d {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-fn {
+    position: absolute;
+    margin-top: -110%;
+    margin-right: 10%;
+}
+
+.div-ln {
+    position: absolute;
+    margin-top: -96%;
+    margin-right: 38%;
+}
+
+.txt-stu-firstName {
+    margin-top: -11%;
+    margin-left: 30%;
+    font-size: 1rem;
+    width: 20vw;
+}
+
+.txt-stu-lastName {
+    margin-top: -10%;
+    margin-left: 60%;
+    font-size: 1rem;
+    width: 20vw;
+}
+
+.txt-stu {
+    position: relative;
+    border-style: hidden hidden solid hidden;
+    background-color: rgb(245, 245, 240);
+    height: 4vh;
+    outline: none;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+.lbl-stu-firstName {
+    margin-left: -30%;
+}
+
+.lbl-stu-lastName {
+    margin-left: -30%;
+}
+
+.lbl-stu {
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.div-nic {
+    position: absolute;
+    margin-top: -80%;
+    margin-right: 38%;
+}
+
+.div-nic .lbl-stu-nic {
+    position: absolute;
+    margin-top: -7%;
+}
+
+.txt-stu-nic {
+    margin-top: -12%;
+    margin-left: 63.2%;
+    font-size: 1rem;
+    width: 15vw;
+}
+
+.lbl-stu-nic {
+    margin-left: -16%;
+}
+
+
+.div-genlbl {
+    position: absolute;
+    margin-top: -70%;
+    margin-right: 76%;
+}
+
+.lbl-stu-gender {
+    text-decoration: underline;
+}
+
+.div-gender {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+}
+
+.div-gender-edit {
+
+    border: 1px solid black;
+    padding: 1%;
+    margin-left: -38%;
+    /* margin-right: -10%; */
+    border-radius: 5px;
+    margin-top: -110%;
+}
+
+.div-genM {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+
+
+}
+
+.div-genF {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    margin-right: 25%;
+}
+
+.div-age {
+    position: absolute;
+    margin-top: -35%;
+    margin-right: 63%;
+}
+
+.txt-stu-age {
+    margin-top: -22%;
+    margin-left: 140%;
+    font-size: 1rem;
+    width: 8vw;
+    text-align: center;
+}
+
+
+
+.div-conlbl {
+    position: absolute;
+    margin-top: -20%;
+    margin-left: -55%;
+}
+
+.lbl-stu-conD {
+    text-decoration: underline;
+}
+
+
+.div-ph {
+    position: absolute;
+    margin-top: -3%;
+    margin-right: 53%;
+}
+
+
+.lbl-stu-phoneNumber {
+    margin-left: -12%;
+    margin-top: -9%;
+}
+
+.txt-stu-phoneNumber {
+    margin-top: -20%;
+    margin-left: 104%;
+    font-size: 1rem;
+    width: 10vw;
+}
+
+.div-email {
+    position: absolute;
+    margin-top: 5%;
+    margin-right: 53%;
+}
+
+.lbl-stu-email {
+    margin-left: 18.5%;
+    margin-top: 9%;
+}
+
+.txt-stu-email {
+    margin-top: -9%;
+    margin-left: 77.5%;
+    font-size: 1rem;
+    width: 20vw;
+}
+
+.div-address {
+    position: absolute;
+    margin-top: 25%;
+    margin-left: -64%;
+}
+
+.lbl-stu-address {
+    text-decoration: underline;
+}
+
+
+.div-st {
+    position: absolute;
+    margin-top: 44%;
+    margin-right: 53%;
+}
+
+.txt-stu-st {
+    margin-top: -9%;
+    margin-left: 73%;
+    font-size: 1rem;
+    width: 24vw;
+}
+
+.lbl-stu-st {
+    margin-left: 24%;
+    margin-top: -5%;
+}
+
+.div-di {
+    position: absolute;
+    margin-top: 55%;
+    margin-right: 48%;
+}
+
+.txt-stu-di {
+    margin-top: -21%;
+    margin-left: 35%;
+    font-size: 1rem;
+    width: 10vw;
+}
+
+.lbl-stu-di {
+    margin-left: -22%;
+    margin-top: -5%;
+}
+
+.div-p {
+    position: absolute;
+    margin-top: 55%;
+    margin-left: 70%;
+    margin-right: 40%;
+}
+
+.txt-stu-p {
+    margin-top: -22%;
+    margin-left: 47%;
+    width: 10vw;
+    font-size: 1rem;
+}
+
+.div-schllbl {
+    position: absolute;
+    margin-top: 68%;
+    margin-left: -57%;
+}
+
+.lbl-stu-schl {
+    text-decoration: underline;
+}
+
+.div-schlName {
+    position: absolute;
+    margin-top: 82%;
+    margin-right: 48%;
+}
+
+.lbl-stu-schlName {
+    margin-left: 21%;
+}
+
+.txt-stu-schlName {
+    margin-left: 55%;
+    margin-top: -10%;
+    width: 25vw;
+    font-size: 1rem;
+}
+
+
+.div-schlYear {
+    position: absolute;
+    margin-top: 95%;
+    margin-right: 52%;
+}
+
+.txt-stu-Year {
+    margin-top: -16%;
+    margin-left: 27%;
+    font-size: 1rem;
+}
+.lbl-stu-Year{
+    margin-left: 8%;
+}
+.div-parentlbl {
+    position: absolute;
+    margin-top: 109%;
+    margin-left: -66%;
+}
+
+.lbl-stu-parentlbl {
+    text-decoration: underline;
+}
+
+.div-mn {
+    position: absolute;
+    margin-top: 127%;
+    margin-right: 48%;
+}
+
+.txt-stu-motherName {
+    margin-top: -16%;
+    margin-left: 75%;
+    width: 14vw;
+    font-size: 1rem;
+}
+
+.lbl-stu-motherName{
+    margin-top: -10%;
+}
+
+.div-mph{
+    position: absolute;
+    margin-top: 138%;
+    margin-right: 52%;
+}
+
+.txt-stu-motherphoneNumber{
+    margin-top: -15.4%;
+    margin-left: 105%;
+    font-size: 1rem;
+    width: 10vw;
+}
+
+.div-mph .lbl-stu-motherphoneNumbe{
+   
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.div-fan{
+    position: absolute;
+    margin-top: 153%;
+    margin-right: 52%;  
+}
+
+.txt-stu-fatherName{
+    margin-top: -20%;
+    margin-left: 90%;
+    font-size: 1rem;
+    width: 10vw;
+}
+
+.lbl-stu-fatherName{
+    margin-left: -10%;
+}
+
+.div-fph{
+    position: absolute;
+    margin-top: 166%;
+    margin-right: 53%; 
+}
+
+.txt-stu-fatherphoneNumber{
+    margin-top: -20%;
+    margin-left: 110%;
+    font-size: 1rem;
+    width: 10vw;
+}
+
+
+
+.div-course{
+    position: absolute;
+    margin-top: -13%;
+    margin-left: -13%;
+}
+
+.lbl-stu2{
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.lbl-stu-course{
+    text-decoration: underline;
+}
+
+.div-courseR{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.div-courseR-edit{
+    border: 1px solid black;
+    padding: 1%;
+    margin-left: -70%;
+    /* margin-right: -10%; */
+    border-radius: 5px;
+    margin-top: -75%;   
+}
+
+.div-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    margin-right: 55%;
+}
+
+.div-full{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    margin-left: -60%;
+}
+
+
+/* buttonEdit */
+
+.edit-button{
+    position: absolute;
+   border-radius: 10px;
+   background-color: #70a1ff;
+   color: aliceblue;
+   font-weight: bolder;
+   border-style: none;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 1rem;
+    padding: 1% 3% 1% 3%;
+    margin-top: -10%;
+    margin-left: 10%;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.edit-button:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+.update-button{
+    position: absolute;
+    border-radius: 10px;
+    background-color: #70a1ff;
+    color: aliceblue;
+    font-weight: bolder;
+    border-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+     padding: 1% 3% 1% 3%;
+     margin-top: -10%;
+     margin-left: 20%;
+     cursor: pointer;
+     transition: .4s;
+     z-index: 1;
+}
+
+.update-button:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+.delete-button{
+    position: absolute;
+    border-radius: 10px;
+    background-color: #70a1ff;
+    color: aliceblue;
+    font-weight: bolder;
+    border-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+     padding: 1% 3% 1% 3%;
+     margin-top: -10%;
+     margin-left: 32%;
+     cursor: pointer;
+     transition: .4s;
+     z-index: 1;
+}
+
+.delete-button:hover{
+    transform: scale(.9);
+    cursor: pointer;
+}
+

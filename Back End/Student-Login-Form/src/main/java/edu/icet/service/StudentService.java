@@ -14,4 +14,6 @@ public void saveStudent(Student student);
     boolean deleteStudent(Long id);
 
     void updateStudent(Student student);
+
+    Student getStudentById(Long id);
 }
