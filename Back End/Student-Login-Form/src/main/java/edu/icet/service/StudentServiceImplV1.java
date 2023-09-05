@@ -80,11 +80,11 @@ public class StudentServiceImplV1 implements StudentService {
 
     @Override
     public void updateStudent(Student student) {
-        boolean stu = validateStudent(student);
-        if (stu) {
+//        boolean stu = validateStudent(student);
+//        if (stu) {
             StudentEntity map = modelMapper.map(student, StudentEntity.class);
             studentRepository.save(map);
-        }
+//        }
     }
 
     @Override
