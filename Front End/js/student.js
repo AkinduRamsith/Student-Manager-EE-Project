@@ -115,10 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
               
                 <div class="div-d div-gender">
                     <div class="div-gender-edit div-genM">
-                       <input type="radio" id="male" disabled class="" name="gen">Male
+                       <input type="radio" id="male" disabled class="" name="gen" value="Male">Male
                     </div>
                     <div class="div-gender-edit div-genF">
-                        <input type="radio" name="gen" disabled id="female" class="">Female
+                        <input type="radio" name="gen" disabled id="female" class="" value="Female">Female
                     </div>
                 </div>
     
@@ -200,10 +200,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="div-d div-courseR">
                 <div class="div-courseR-edit div-full">
-                    <input type="radio" disabled id="fullTime" class="" name="ct">Full Time   
+                    <input type="radio" disabled id="fullTime" class="" name="ct" value="Full Time">Full Time   
                 </div>
                 <div class="div-courseR-edit div-part">
-                    <input type="radio" disabled name="ct" id="partTime" class="">Part Time
+                    <input type="radio" disabled name="ct" id="partTime" class="" value="Part Time">Part Time
                 </div>
             </div>
             <select name="" id="combo-sele" class="combo">
@@ -235,12 +235,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else if (res.gender === "Female") {
                         female.checked = true;
                     }
-                    for (let i = 0; i < comboSele.options.length(); i++) {
-                        if (combo-sele.options[i].value === res.course) {
-                            comboSele.selectedIndex = i;
-                            break;
-                        }
-                    }
+                    // for (let i = 0; i < comboSele.options.length(); i++) {
+                    //     if (combo-sele.options[i].value === res.course) {
+                    //         comboSele.selectedIndex = i;
+                    //         break;
+                    //     }
+                    // }
                     phoneNumber1.value = res.phoneNumber;
                     email.value = res.email;
                     streetAddress.value = res.streetAddress;
@@ -353,17 +353,19 @@ btnUpdate.addEventListener('click', () => {
 
     let gen;
     for (let i = 0; i < gender.length; i++) {
-        if (gender[i].checked)
+        if (gender[i].checked){  gen = gender[i].value;}
 
-            gen = gender[i].value;
+          
     }
 
     let typeC;
 
     for (let i = 0; i < type.length; i++) {
-        if (type[i].checked)
-
+        if (type[i].checked){
             typeC = type[i].value;
+        }
+
+           
     }
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");

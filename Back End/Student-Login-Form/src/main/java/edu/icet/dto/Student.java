@@ -30,6 +30,8 @@ public class Student {
     private String motherPhoneNumber;
     private String fatherName;
     private String fatherPhoneNumber;
+    private String imageName;
+    private String imagePath;
 
 
     public void setFirstName(String firstName){

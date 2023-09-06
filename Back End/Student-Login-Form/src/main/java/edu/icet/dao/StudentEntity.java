@@ -2,6 +2,7 @@ package edu.icet.dao;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "student")
+@Builder
 public class StudentEntity {
 
     @Id
@@ -34,6 +36,9 @@ public class StudentEntity {
     private String motherPhoneNumber;
     private String fatherName;
     private String fatherPhoneNumber;
+    private String imageName;
+    private String imagePath;
+
 
 //    public void setFirstName(String firstName){
 //        if(firstName.isBlank())return;

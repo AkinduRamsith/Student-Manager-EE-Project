@@ -1,6 +1,4 @@
 
-P
- src/main/java/edu/icet/Main.java,d\0\d002a3b1d8a24022d8d1caea45cff0fbd6d07b61
 U
 %src/main/java/edu/icet/dto/Admin.java,5\2\520227e31e1cb6b28b4fa55980748728bf6bb8de
 `
@@ -9,21 +7,3 @@ f
 6src/main/java/edu/icet/service/AdminServiceImplV1.java,6\6\66c91bd79587c841e63a5972e294dd97a4b2b28b
 [
 +src/main/java/edu/icet/dao/AdminEntity.java,4\d\4d408829d31324ec9c112c899a7c9c0b864e4337
-f
-6src/main/java/edu/icet/controller/AdminController.java,9\c\9cecda8f12a3212373fe3c8baf5fd9d7d1f3cba3
-b
-2src/main/java/edu/icet/service/StudentService.java,e\a\eadc57461c0ac2c9ce3502d1827e8824cc761667
-f
-6src/main/java/edu/icet/repository/AdminRepository.java,d\d\dd3844b5999557b58e551b55c69b282451a9e39c
-W
-'src/main/java/edu/icet/dto/Student.java,b\0\b03a9f5155ea4c4b461a27e38074fa6439538358
-h
-8src/main/java/edu/icet/repository/StudentRepository.java,8\2\8286440c88e258658caf0589933ef7b365869e04
-h
-8src/main/java/edu/icet/controller/StudentController.java,6\d\6ddacb49a1d9194a9b7847c5225fa35248b325bc
-]
--src/main/java/edu/icet/dao/StudentEntity.java,3\7\37e7649946992b3dc46522da922ed549dfa51b6e
-h
-8src/main/java/edu/icet/service/StudentServiceImplV1.java,c\0\c0e805fffb25b779fca0e7654986b5872fc301d2
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

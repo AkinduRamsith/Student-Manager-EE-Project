@@ -97,16 +97,18 @@ hr {
     width: 20%;
     background-color: black;
     position: absolute;
-    margin-top: -1%;
+    margin-top: 1%;
     margin-left: -10%;
+    
 }
 
 .para-name {
-    margin-top: -1%;
-    margin-left: -7%;
+    margin-top: 1%;
+    margin-left: -8%;
     position: absolute;
-    font-size: 120%;
+    font-size: 1.2rem;
     text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -155,7 +157,7 @@ hr {
 .div-ln {
     position: absolute;
     margin-top: -96%;
-    margin-right: 38%;
+    margin-right: 41%;
 }
 
 .txt-stu-firstName {
@@ -187,7 +189,7 @@ hr {
 }
 
 .lbl-stu-lastName {
-    margin-left: -30%;
+    margin-left: -32%;
 }
 
 .lbl-stu {
@@ -199,7 +201,7 @@ hr {
 .div-nic {
     position: absolute;
     margin-top: -80%;
-    margin-right: 38%;
+    margin-right: 41%;
 }
 
 .div-nic .lbl-stu-nic {
@@ -242,7 +244,7 @@ hr {
 
     border: 1px solid black;
     padding: 1%;
-    margin-left: -38%;
+    margin-left: -41%;
     /* margin-right: -10%; */
     border-radius: 5px;
     margin-top: -110%;
@@ -270,7 +272,7 @@ hr {
 .div-age {
     position: absolute;
     margin-top: -35%;
-    margin-right: 63%;
+    margin-right: 70%;
 }
 
 .txt-stu-age {
@@ -297,7 +299,7 @@ hr {
 .div-ph {
     position: absolute;
     margin-top: -3%;
-    margin-right: 53%;
+    margin-right: 58%;
 }
 
 
@@ -316,7 +318,7 @@ hr {
 .div-email {
     position: absolute;
     margin-top: 5%;
-    margin-right: 53%;
+    margin-right: 58%;
 }
 
 .lbl-stu-email {
@@ -334,7 +336,7 @@ hr {
 .div-address {
     position: absolute;
     margin-top: 25%;
-    margin-left: -64%;
+    margin-left: -67%;
 }
 
 .lbl-stu-address {
@@ -345,7 +347,7 @@ hr {
 .div-st {
     position: absolute;
     margin-top: 44%;
-    margin-right: 53%;
+    margin-right: 58%;
 }
 
 .txt-stu-st {
@@ -363,7 +365,7 @@ hr {
 .div-di {
     position: absolute;
     margin-top: 55%;
-    margin-right: 48%;
+    margin-right: 52.5%;
 }
 
 .txt-stu-di {
@@ -405,7 +407,7 @@ hr {
 .div-schlName {
     position: absolute;
     margin-top: 82%;
-    margin-right: 48%;
+    margin-right: 52%;
 }
 
 .lbl-stu-schlName {
@@ -414,7 +416,7 @@ hr {
 
 .txt-stu-schlName {
     margin-left: 55%;
-    margin-top: -10%;
+    margin-top: -8%;
     width: 25vw;
     font-size: 1rem;
 }
@@ -423,13 +425,14 @@ hr {
 .div-schlYear {
     position: absolute;
     margin-top: 95%;
-    margin-right: 52%;
+    margin-right: 56%;
 }
 
 .txt-stu-Year {
-    margin-top: -16%;
+    margin-top: -14%;
     margin-left: 27%;
     font-size: 1rem;
+    text-align: justify;
 }
 .lbl-stu-Year{
     margin-left: 8%;
@@ -447,7 +450,7 @@ hr {
 .div-mn {
     position: absolute;
     margin-top: 127%;
-    margin-right: 48%;
+    margin-right: 53%;
 }
 
 .txt-stu-motherName {
@@ -464,7 +467,7 @@ hr {
 .div-mph{
     position: absolute;
     margin-top: 138%;
-    margin-right: 52%;
+    margin-right: 58%;
 }
 
 .txt-stu-motherphoneNumber{
@@ -483,7 +486,7 @@ hr {
 .div-fan{
     position: absolute;
     margin-top: 153%;
-    margin-right: 52%;  
+    margin-right: 58%;  
 }
 
 .txt-stu-fatherName{
@@ -500,7 +503,7 @@ hr {
 .div-fph{
     position: absolute;
     margin-top: 166%;
-    margin-right: 53%; 
+    margin-right: 59%; 
 }
 
 .txt-stu-fatherphoneNumber{

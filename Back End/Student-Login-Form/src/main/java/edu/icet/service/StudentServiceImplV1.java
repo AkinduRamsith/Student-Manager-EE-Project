@@ -9,7 +9,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,13 +26,21 @@ public class StudentServiceImplV1 implements StudentService {
     StudentRepository studentRepository;
     @Autowired
     ModelMapper modelMapper;
+    private final String FOLDER_PATH="D:/ICM103/Web-FrankSIr/Student Manager/Front End/images/";
 
     @Override
-    public void saveStudent(Student student) {
+    public void saveStudent(Student student, MultipartFile file) throws IOException {
+        String filePath=FOLDER_PATH+file.getOriginalFilename();
         boolean stu = validateStudent(student);
         if (stu) {
+//            Student entity=Student.builder()
+//                    .imageName(file.getOriginalFilename())
+//                    .imagePath(filePath).build();
             StudentEntity map = modelMapper.map(student, StudentEntity.class);
+            map.setImageName(file.getOriginalFilename());
+            map.setImagePath(filePath);
             studentRepository.save(map);
+            file.transferTo(new File(filePath));
         }
 
     }
@@ -105,4 +116,6 @@ public class StudentServiceImplV1 implements StudentService {
         }
         return true;
     }
+
+
 }

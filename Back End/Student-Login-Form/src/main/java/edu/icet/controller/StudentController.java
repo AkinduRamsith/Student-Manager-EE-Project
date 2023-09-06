@@ -21,8 +21,8 @@ public class StudentController {
     StudentService studentService;
 
     @PostMapping
-    public void saveStudent(@RequestBody Student student) {
-        studentService.saveStudent(student);
+    public void saveStudent(@ModelAttribute Student student,@RequestPart("file") MultipartFile file) throws IOException {
+        studentService.saveStudent(student,file);
     }
 
     @GetMapping("/{id}")
