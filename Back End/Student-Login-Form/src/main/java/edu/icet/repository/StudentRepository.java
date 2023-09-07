@@ -7,6 +7,5 @@ public interface StudentRepository extends CrudRepository<StudentEntity,Long> {
     Iterable<StudentEntity> findAll();
 
 
-
-
+    Iterable<StudentEntity> findByFirstName(String firstName);
 }

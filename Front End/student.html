@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body onload="getStudent();">
+
+   
     <div class="welcome-1">
         <div class="navbar-e">
             <nav id="navbar">
@@ -18,22 +23,36 @@
                     <li><a href="./signUp.html">Register</a></li>
                     <li><a href="./profile.html">Profile</a></li>
                 </ul>
-              
-               
-            
-              
+
+
+
+
             </nav>
         </div>
     </div>
-<div id="pro">
-    <table border="1"  id="table-student">
-     
-    </table>
-    <input type="button" class="edit-button" id="edit1" style="visibility: hidden;" value="Edit"> 
-    <input type="button" class="update-button" id="update1" style="visibility: hidden;" value="Update"> 
-    <input type="button" class="delete-button" id="delete1" style="visibility: hidden;" value="Delete"> 
-</div >
-  
+
+    <div class="searchBox">
+        <table class="searchAll">
+            <tr>
+                <td>
+                    <input type="text" name="" placeholder="Search" class="search" id="searchText">
+                </td>
+                <td>
+                    <i class="fa-solid fa-magnifying-glass" style="color: #ea1538;" id="btn-search"></i>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="pro">
+        <table border="1" id="table-student">
+
+        </table>
+        <input type="button" class="edit-button" id="edit1" style="visibility: hidden;" value="Edit">
+        <input type="button" class="update-button" id="update1" style="visibility: hidden;" value="Update">
+        <input type="button" class="delete-button" id="delete1" style="visibility: hidden;" value="Delete">
+    </div>
+
     <script src="js/student.js"></script>
 </body>
+
 </html>

@@ -18,4 +18,6 @@ public void saveStudent(Student student, MultipartFile file) throws IOException;
     void updateStudent(Student student);
 
     Student getStudentById(Long id);
+
+    List<Student> getStudentByFirstNameAndLastName(String name);
 }

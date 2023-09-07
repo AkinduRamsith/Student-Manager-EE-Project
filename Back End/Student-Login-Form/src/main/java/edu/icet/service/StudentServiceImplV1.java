@@ -105,6 +105,39 @@ public class StudentServiceImplV1 implements StudentService {
         return modelMapper.map(byId,Student.class);
     }
 
+    @Override
+    public List<Student> getStudentByFirstNameAndLastName(String name) {
+        Iterable<StudentEntity> studentList = studentRepository.findByFirstName(name);
+        Iterator<StudentEntity> iterator = studentList.iterator();
+        List<Student> studentModel = new ArrayList<>();
+        while (iterator.hasNext()) {
+            StudentEntity entity = iterator.next();
+            studentModel.add(Student.builder()
+                    .id(entity.getId())
+                    .firstName(entity.getFirstName())
+                    .lastName(entity.getLastName())
+                    .nic(entity.getNic())
+                    .phoneNumber(entity.getPhoneNumber())
+                    .age(entity.getAge())
+                    .email(entity.getEmail())
+                    .streetAddress(entity.getStreetAddress())
+                    .province(entity.getProvince())
+                    .district(entity.getDistrict())
+                    .gender(entity.getGender())
+                    .courseType(entity.getCourseType())
+                    .course(entity.getCourse())
+                    .schoolName(entity.getSchoolName())
+                    .schoolYear(entity.getSchoolYear())
+                    .stream(entity.getStream())
+                    .motherName(entity.getMotherName())
+                    .motherPhoneNumber(entity.getMotherPhoneNumber())
+                    .fatherName(entity.getFatherName())
+                    .fatherPhoneNumber(entity.getFatherPhoneNumber())
+                    .build());
+        }
+        return studentModel;
+    }
+
     private boolean findBySId(Long id) {
         return studentRepository.findById(id) != null ? true : false;
     }

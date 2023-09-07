@@ -4,6 +4,8 @@ const btnId = document.querySelectorAll(".btnsId");
 const btnedit = document.getElementById("edit1");
 const btnUpdate = document.getElementById("update1");
 const btnDelete = document.getElementById("delete1");
+const btnSearch = document.getElementById("btn-search");
+const txtSearch=document.getElementById("searchText");
 
 
 // -----------------------------------------------------------------------
@@ -82,10 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     console.log(res.firstName);
                     tblBody += `
+
             <div class="profile profile-edit">
 
-            <div class="image">
-                <div class="img img-edit">
+            <div class="image image1">
+                <div class="img img-edit" style="background-image: url('images/${res.imageName}')">
     
                 </div>
                 <hr>
@@ -93,6 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p>
                        ${res.firstName} ${res.lastName}
                     </p>
+
+
+                </div>
+                <div class="sID">
+                <label>Student ID :</label>
+                <p>
+                S${res.id}
+                </p>
                 </div>
             </div>
     
@@ -236,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         female.checked = true;
                     }
                     // for (let i = 0; i < comboSele.options.length(); i++) {
-                    //     if (combo-sele.options[i].value === res.course) {
+                    //     if (combo - sele.options[i].value === res.course) {
                     //         comboSele.selectedIndex = i;
                     //         break;
                     //     }
@@ -353,19 +364,19 @@ btnUpdate.addEventListener('click', () => {
 
     let gen;
     for (let i = 0; i < gender.length; i++) {
-        if (gender[i].checked){  gen = gender[i].value;}
+        if (gender[i].checked) { gen = gender[i].value; }
 
-          
+
     }
 
     let typeC;
 
     for (let i = 0; i < type.length; i++) {
-        if (type[i].checked){
+        if (type[i].checked) {
             typeC = type[i].value;
         }
 
-           
+
     }
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -438,4 +449,46 @@ btnUpdate.addEventListener('click', () => {
     //         window.open("../student.html", "_top")
     //     })
     //     .catch(error => console.log('error', error))
+})
+
+
+btnSearch.addEventListener('click', () => {
+    btnedit.style.visibility = "hidden"
+    btnUpdate.style.visibility = "hidden"
+    btnDelete.style.visibility = "hidden"
+    var requestOptions = {
+        method: 'GET',
+
+        redirect: 'follow'
+    };
+    let search1 = txtSearch.value;
+    console.log(search1);
+    fetch(`http://localhost:8080/student/search/${txtSearch.value}`, requestOptions)
+        .then(response => response.json())
+        .then(res => {
+            let tblBody = ` <tr>
+                    <th>Stuent ID</th>
+                    <th>Student Name</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                    <th>Course Type</th>
+                    <th>Course</th>
+                    </tr>
+                    `
+
+            res.forEach(element => {
+                console.log(element.nic);
+                tblBody += `
+     <tr>
+     <td> <button class="btnsId">${element.id}</button></td>
+     <td>${element.firstName}${" "}${element.lastName}</td>
+     <td>${element.streetAddress}${","}${element.district}</td>
+     <td>${element.age}</td>
+     <td>${element.courseType}</td>
+     <td>${element.course}</td>
+ </tr>`;
+            });
+            studentTable.innerHTML = tblBody;
+          
+        })
 })

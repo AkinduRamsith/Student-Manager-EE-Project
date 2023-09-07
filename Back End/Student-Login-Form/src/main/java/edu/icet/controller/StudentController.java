@@ -50,4 +50,10 @@ public class StudentController {
         studentService.updateStudent(student);
     }
 
+    @GetMapping("/search/{name}")
+    public List<Student> getStudentByFirstNameAndLastName(@PathVariable String name){
+        return studentService.getStudentByFirstNameAndLastName(name);
+    }
+
+
 }

@@ -12,7 +12,7 @@ btnLogin.addEventListener("click", ()=>{
     .then(res=>{
        if(res==true){
         console.log(res);
-        window.open("../home.html","_top");
+        window.open("../student.html","_top");
        }else{
         alert("Wrong")
         console.log(res);
