@@ -31,7 +31,6 @@ public class AdminServiceImplV1 implements AdminService{
 
     private boolean validateAdmin(Admin admin){
         if(admin.getAdminName()==null || admin.getAdminEmail()==null || admin.getAdminPassword()==null){
-            System.out.println("Hellow");
             return false;
         }
         return true;

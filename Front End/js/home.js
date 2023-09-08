@@ -1,11 +1,11 @@
-const navbar=document.getElementById("navbar");
-const menu=document.getElementById("menu-navbar");
+const navbar = document.getElementById("navbar");
+const menu = document.getElementById("menu-navbar");
 
-window.onscroll=()=>{
-    if(window.pageYOffset>=menu.offsetTop){
+window.onscroll = () => {
+    if (window.pageYOffset >= menu.offsetTop) {
         navbar.classList.add("sticky");
 
-    }else{
+    } else {
         navbar.classList.remove("sticky");
     }
 }

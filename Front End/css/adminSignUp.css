@@ -1,34 +1,37 @@
-html{
+html {
     background-color: #ea1538;
 }
-.welcome-1{
-   
+
+.welcome-1 {
+
     margin: 0px;
     width: 100vw;
     height: 15vh;
 
-   
+
 }
 
-.img1{
+.img1 {
     position: absolute;
     width: 420px;
     height: 300px;
-   margin-left: 400px;
-   margin-top: -60px;
+    margin-left: 400px;
+    margin-top: -60px;
     background-image: url("/profiles/vecteezy_man-entering-security-password_4689193.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
-.nav-sign-in1{
+
+.nav-sign-in1 {
     color: #ea1538;
     background: white;
 }
-.regi{
+
+.regi {
     display: flex;
-   
+
     align-items: center;
     flex-direction: column;
     background-color: #fff;
@@ -40,71 +43,77 @@ html{
     border-radius: 25px;
 }
 
-.regi-1{
+.regi-1 {
     display: flex;
     float: left;
     flex-direction: column;
     position: absolute;
     top: 25%;
-    left:4%;
+    left: 4%;
     padding: 10px 20px;
     margin: 20px;
-    transform:translate(-50% -50%);
+    transform: translate(-50% -50%);
 }
 
-.regi h1{
+.regi h1 {
     position: absolute;
     top: 15%;
     left: 60px;
-   
+
 }
-.regi-1 input{
+
+.regi-1 input {
     width: 300px;
     height: 25px;
     left: 0;
     outline: none;
 }
-.regi-1 .lblUser{
+
+.regi-1 .lblUser {
     position: absolute;
     width: 60px;
     margin-top: 13px;
     font-size: 10px;
-    text-transform:uppercase;
-    left: 0;
-}
-.regi-1 .lblEmail{
-    position: absolute;
-    font-size: 10px;
-    margin-top:65px;
-    text-transform:uppercase;
-    left: 0;
-}
-.regi-1 .lblPassword{
-    position: absolute;
-    margin-top:115px;
-    font-size: 10px;
-    text-transform:uppercase;
+    text-transform: uppercase;
     left: 0;
 }
 
-.regi-1 .input-user{
+.regi-1 .lblEmail {
+    position: absolute;
+    font-size: 10px;
+    margin-top: 65px;
+    text-transform: uppercase;
+    left: 0;
+}
+
+.regi-1 .lblPassword {
+    position: absolute;
+    margin-top: 115px;
+    font-size: 10px;
+    text-transform: uppercase;
+    left: 0;
+}
+
+.regi-1 .input-user {
     position: absolute;
     margin-top: 30px;
 }
-.regi-1 .input-email{
+
+.regi-1 .input-email {
     position: absolute;
     margin-top: 82px;
 }
-.regi-1 .input-password{
+
+.regi-1 .input-password {
     position: absolute;
     margin-top: 130px;
 }
 
-.btn-signUpReg{
+.btn-signUpReg {
     /* position: absolute; */
     margin-left: 160px;
     margin-top: 220px;
-    background:  #ea1538;
+    background: #ea1538;
     color: white;
     border-radius: 30px;
     padding: 12px 25px;
@@ -114,13 +123,13 @@ html{
     transition: .4s;
 }
 
-.btn-signUpReg:hover{
+.btn-signUpReg:hover {
     transform: scale(.9);
     cursor: pointer;
 }
 
 
-.regi-1 p{
+.regi-1 p {
     font-size: 20px;
     position: absolute;
     top: 78%;
@@ -129,26 +138,28 @@ html{
     font-family: monospace;
 }
 
-.fa-logo{
+.fa-logo {
     position: absolute;
     top: 83%;
     left: 0;
 }
 
-.fa-editgoog, .fa-editface , .fa-edittwi {
-    border:1px solid #ea1538;
+.fa-editgoog,
+.fa-editface,
+.fa-edittwi {
+    border: 1px solid #ea1538;
     border-radius: 5px;
     padding: 10px;
 }
 
-.fa-editeye{
+.fa-editeye {
     position: absolute;
     top: 52%;
     left: 90%;
-   opacity: 70%;
-   cursor: pointer;
+    opacity: 70%;
+    cursor: pointer;
 }
 
-.slash-eye{
+.slash-eye {
     visibility: hidden;
 }

@@ -397,9 +397,11 @@ hr {
     margin-left: 27%;
     font-size: 1rem;
 }
-.lbl-stu-Year{
+
+.lbl-stu-Year {
     margin-left: 8%;
 }
+
 .div-parentlbl {
     position: absolute;
     margin-top: 109%;
@@ -423,53 +425,53 @@ hr {
     font-size: 1rem;
 }
 
-.lbl-stu-motherName{
+.lbl-stu-motherName {
     margin-top: -10%;
 }
 
-.div-mph{
+.div-mph {
     position: absolute;
     margin-top: 138%;
     margin-right: 52%;
 }
 
-.txt-stu-motherphoneNumber{
+.txt-stu-motherphoneNumber {
     margin-top: -15.4%;
     margin-left: 105%;
     font-size: 1rem;
     width: 10vw;
 }
 
-.div-mph .lbl-stu-motherphoneNumbe{
-   
+.div-mph .lbl-stu-motherphoneNumbe {
+
     margin-top: 10%;
     margin-left: 20%;
 }
 
-.div-fan{
+.div-fan {
     position: absolute;
     margin-top: 153%;
-    margin-right: 52%;  
+    margin-right: 52%;
 }
 
-.txt-stu-fatherName{
+.txt-stu-fatherName {
     margin-top: -20%;
     margin-left: 90%;
     font-size: 1rem;
     width: 10vw;
 }
 
-.lbl-stu-fatherName{
+.lbl-stu-fatherName {
     margin-left: -10%;
 }
 
-.div-fph{
+.div-fph {
     position: absolute;
     margin-top: 166%;
-    margin-right: 53%; 
+    margin-right: 53%;
 }
 
-.txt-stu-fatherphoneNumber{
+.txt-stu-fatherphoneNumber {
     margin-top: -20%;
     margin-left: 110%;
     font-size: 1rem;
@@ -478,22 +480,22 @@ hr {
 
 
 
-.div-course{
+.div-course {
     position: absolute;
     margin-top: -13%;
     margin-left: -13%;
 }
 
-.lbl-stu2{
+.lbl-stu2 {
     font-size: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.lbl-stu-course{
+.lbl-stu-course {
     text-decoration: underline;
 }
 
-.div-courseR{
+.div-courseR {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -501,16 +503,16 @@ hr {
     position: absolute;
 }
 
-.div-courseR-edit{
+.div-courseR-edit {
     border: 1px solid black;
     padding: 1%;
     margin-left: -70%;
     /* margin-right: -10%; */
     border-radius: 5px;
-    margin-top: -75%;   
+    margin-top: -75%;
 }
 
-.div-part{
+.div-part {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,7 +521,7 @@ hr {
     margin-right: 55%;
 }
 
-.div-full{
+.div-full {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -527,60 +529,3 @@ hr {
     height: 4vh;
     margin-left: -60%;
 }
-
-/* .lbl-stu-fatherphoneNumber{
-
-} */
-
-/* .profile hr{
-    margin-top: 0%;
-    
-}
-.hr-edit{
-    z-index: 0;
-}
-
-form{
-    margin-top: 5%;
-}
-
-
-.img{
-    
-    background-image: url("../resou/clark-van-der-beken-mcCAFvlzZFQ-unsplash.jpg"); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 1px solid black;
-   
-    border-radius: 50%;
-    padding: 1%;
-    
-}
-.image{
-    background-color: rebeccapurple;
-
-    
-}
-.img-edit{
-    width: 100px;
-    height: 100px;
-    margin-left: 4%;
-    margin-right: 80%;
-    margin-top: 5%;
-    margin-bottom: 3%;
-}
-
-.txt-file1{
-    padding: 2%;
-}
-
-.profile button{
-    margin-left: 10%;
-    margin-bottom: 2%;
-    width: 10%;
-    padding: 1%;
-    border-radius: 15%;
-    border: none;
-   
-} */

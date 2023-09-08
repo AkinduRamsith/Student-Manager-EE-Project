@@ -5,7 +5,8 @@ const btnedit = document.getElementById("edit1");
 const btnUpdate = document.getElementById("update1");
 const btnDelete = document.getElementById("delete1");
 const btnSearch = document.getElementById("btn-search");
-const txtSearch=document.getElementById("searchText");
+const txtSearch = document.getElementById("searchText");
+const btnHome = document.getElementById("navbar");
 
 
 // -----------------------------------------------------------------------
@@ -34,10 +35,10 @@ const type = document.getElementsByName("ct");
 const gender = document.getElementsByName('gen');
 // -----------------------------------------------------------------------
 
+btnHome.addEventListener('click', () => {
+    window.open("../index.html", "_top");
+})
 
-
-// let btnedit=document.getElementById("edit1");
-// const firstName1=document.getElementById("firstName");
 function getStudent() {
     fetch("http://localhost:8080/student")
         .then(response => response.json())
@@ -70,6 +71,8 @@ function getStudent() {
 }
 let buttonValue;
 let sId;
+let path;
+let name1;
 document.addEventListener("DOMContentLoaded", function () {
 
 
@@ -80,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
             fetch(`http://localhost:8080/student/${buttonValue}`)
                 .then(response => response.json())
                 .then(res => {
+                    path=res.imagePath;
+                    name1=res.imageName;
                     let tblBody = "";
 
                     console.log(res.firstName);
@@ -217,11 +222,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     <input type="radio" disabled name="ct" id="partTime" class="" value="Part Time">Part Time
                 </div>
             </div>
+            <div class="combo-box combo-box-edit">
+            <label>Course Selected :</label>
             <select name="" id="combo-sele" class="combo">
-<option value="ICD">ICD</option>
-<option value="ICM">ICM</option>
-<option value="ICP">ICP</option>
-</select> 
+            </select> 
+            </div>
+            <div class="combo1-box combo-box1-edit">
+            <label>Stream Selected :</label>
+            <select name="" id="combo1-sele" class="combo1">
+            </select> 
+            </div>
+           
         </div>
     
     
@@ -229,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
      
             `;
-                    const comboSele = document.getElementById("combo-sele");
+                    // const comboSele = document.getElementById("combo-sele");
 
 
                     btnedit.style.visibility = "visible"
@@ -246,12 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else if (res.gender === "Female") {
                         female.checked = true;
                     }
-                    // for (let i = 0; i < comboSele.options.length(); i++) {
-                    //     if (combo - sele.options[i].value === res.course) {
-                    //         comboSele.selectedIndex = i;
-                    //         break;
-                    //     }
-                    // }
+                    
                     phoneNumber1.value = res.phoneNumber;
                     email.value = res.email;
                     streetAddress.value = res.streetAddress;
@@ -270,14 +276,35 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     sId = res.id;
                     console.log(sId);
+                    let combo = ["ICD", "ICM", "ICP"];
+                    const comboSele = document.getElementById("combo-sele");
+                    for (let i = 0; i < combo.length; i++) {
+                        const option = document.createElement("option");
+                        option.value = combo[i];
+                        option.text = combo[i];
+                        if (combo[i] === res.course) {
+                            option.selected = true;
+                        }
+                        comboSele.appendChild(option);
+                    }
+                    let combo1 = ["Math", "Science", "Technology"];
+                    const comboSele1 = document.getElementById("combo1-sele");
+                    for (let i = 0; i < combo1.length; i++) {
+                        const option1 = document.createElement("option");
+                        option1.value = combo1[i];
+                        option1.text = combo1[i];
+                        if (combo1[i] === res.stream) {
+                            option1.selected = true;
+                        }
+                        comboSele1.appendChild(option1);
+                    }
                 });
         }
     })
 });
 
 let isEditable = true;
-// if(btnedit){
-btnedit?.addEventListener('click', () => {
+btnedit.addEventListener('click', () => {
     const firstNameInput = document.getElementById("firstName1");
     const lastNameInput = document.getElementById("lastName");
     const nicInput = document.getElementById("nic");
@@ -297,6 +324,7 @@ btnedit?.addEventListener('click', () => {
     const femaleRadio = document.getElementById("female");
     const fullTimeRadio = document.getElementById("fullTime");
     const partTimeRadio = document.getElementById("partTime");
+    
 
     firstNameInput.removeAttribute("readonly");
     lastNameInput.removeAttribute("readonly");
@@ -329,13 +357,18 @@ btnDelete.addEventListener('click', () => {
     };
     console.log(buttonValue);
     fetch(`http://localhost:8080/student/${buttonValue}`, requestOption)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(result => {
-            console.log(result)
-            window.open("../student.html", "_top")
+            if (result == true) {
+                window.open("../student.html", "_top");
+            } else {
+                alert("error");
+            }
+
         })
         .catch(error => console.log('error', error))
 })
+
 
 btnUpdate.addEventListener('click', () => {
     const firstNameInput = document.getElementById("firstName1");
@@ -357,27 +390,24 @@ btnUpdate.addEventListener('click', () => {
     const femaleRadio = document.getElementById("female");
     const fullTimeRadio = document.getElementById("fullTime");
     const partTimeRadio = document.getElementById("partTime");
+    const comboCourse = document.querySelector("#combo-sele");
+const stream = document.querySelector("#combo1-sele");
 
     const type = document.getElementsByName("ct");
-
     const gender = document.getElementsByName('gen');
-
+    const ComboCou = comboCourse.value;
+    const comboStr = stream.value;
     let gen;
     for (let i = 0; i < gender.length; i++) {
         if (gender[i].checked) { gen = gender[i].value; }
-
-
     }
-
     let typeC;
-
     for (let i = 0; i < type.length; i++) {
         if (type[i].checked) {
             typeC = type[i].value;
         }
-
-
     }
+   
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -399,7 +429,11 @@ btnUpdate.addEventListener('click', () => {
         "motherName": motherNameInput.value,
         "motherPhoneNumber": motherPhoneNumberInput.value,
         "fatherName": fatherNameInput.value,
-        "fatherPhoneNumber": fatherPhoneNumberInput.value
+        "fatherPhoneNumber": fatherPhoneNumberInput.value,
+        "course" : ComboCou,
+        "stream" : comboStr,
+        "imageName" : name1,
+        "imagePath" : path
     });
 
     var requestOptions = {
@@ -413,42 +447,7 @@ btnUpdate.addEventListener('click', () => {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
-    // var requestOption = {
-    //     method: 'PUT',
-    //     redirect: 'follow'
-    // };
-    // let updateStudent = {
-    //     "firstName": firstNameInput.value,
-    //     "lastName": lastNameInput.value,
-    //     "nic": nicInput.value,
-    //     "phoneNumber": phoneNumber1Input.value,
-    //     "age": age1Input.value,
-    //     "email": emailInput.value,
-    //     "streetAddress": streetAddressInput.value,
-    //     "province": provinceInput.value,
-    //     "district": districtInput.value,
-    //     "gender": gen,
-    //     "courseType": typeC,
-    //     // "course" : ComboCou,
-    //     "schoolName": schlNameInput.value,
-    //     "schoolYear": schoolYearInput.value,
-    //     // "stream" : comboStr,
-    //     "motherName": motherNameInput.value,
-    //     "motherPhoneNumber": motherPhoneNumberInput.value,
-    //     "fatherName": fatherNameInput.value,
-    //     "fatherPhoneNumber": fatherPhoneNumberInput.value
-    // }
-    // fetch("http://localhost:8080/student", {
-    //     method: "PUT",
 
-    //     body: JSON.stringify(updateStudent)
-    // })
-    //     .then(response => response.text())
-    //     .then(result => {
-    //         console.log(result)
-    //         window.open("../student.html", "_top")
-    //     })
-    //     .catch(error => console.log('error', error))
 })
 
 
@@ -489,6 +488,6 @@ btnSearch.addEventListener('click', () => {
  </tr>`;
             });
             studentTable.innerHTML = tblBody;
-          
+
         })
 })

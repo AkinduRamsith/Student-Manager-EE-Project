@@ -8,4 +8,8 @@ public interface StudentRepository extends CrudRepository<StudentEntity,Long> {
 
 
     Iterable<StudentEntity> findByFirstName(String firstName);
+
+
+
+
 }

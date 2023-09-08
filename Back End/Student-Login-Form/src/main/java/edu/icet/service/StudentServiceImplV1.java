@@ -29,26 +29,23 @@ public class StudentServiceImplV1 implements StudentService {
     private final String FOLDER_PATH="D:/ICM103/Web-FrankSIr/Student Manager/Front End/images/";
 
     @Override
-    public void saveStudent(Student student, MultipartFile file) throws IOException {
+    public boolean saveStudent(Student student, MultipartFile file) throws IOException {
         String filePath=FOLDER_PATH+file.getOriginalFilename();
         boolean stu = validateStudent(student);
         if (stu) {
-//            Student entity=Student.builder()
-//                    .imageName(file.getOriginalFilename())
-//                    .imagePath(filePath).build();
             StudentEntity map = modelMapper.map(student, StudentEntity.class);
             map.setImageName(file.getOriginalFilename());
             map.setImagePath(filePath);
-            studentRepository.save(map);
+            StudentEntity save = studentRepository.save(map);
+            boolean isSaved=studentRepository.existsById(save.getId());
             file.transferTo(new File(filePath));
+            if (isSaved==true){
+                return true;
+            }
         }
+        return false;
 
     }
-
-//    @Override
-//    public boolean getStudentByUserName(String userName, String password) {
-//        return studentRepository.findByUserNameAndPassword(userName, password) != null ? true : false;
-//    }
 
     @Override
     public List<Student> getStudents() {
@@ -91,11 +88,11 @@ public class StudentServiceImplV1 implements StudentService {
 
     @Override
     public void updateStudent(Student student) {
-//        boolean stu = validateStudent(student);
-//        if (stu) {
+        boolean stu = validateStudent(student);
+        if (stu) {
             StudentEntity map = modelMapper.map(student, StudentEntity.class);
             studentRepository.save(map);
-//        }
+        }
     }
 
     @Override
@@ -139,12 +136,14 @@ public class StudentServiceImplV1 implements StudentService {
     }
 
     private boolean findBySId(Long id) {
-        return studentRepository.findById(id) != null ? true : false;
+        if (studentRepository.findById(id) == null ){
+            return false;
+        }
+        return true;
     }
 
     private boolean validateStudent(Student student) {
         if (student.getAge() == null || student.getAge().isBlank() || student.getFirstName() == null || student.getFirstName().isBlank() || student.getPhoneNumber() == null || student.getPhoneNumber().isBlank() || student.getEmail() == null || student.getEmail().isBlank() || student.getStreetAddress() == null || student.getStreetAddress().isBlank() || student.getLastName() == null || student.getLastName().isBlank() || student.getNic() == null || student.getNic().isBlank() || student.getProvince() == null || student.getProvince().isBlank() || student.getGender() == null || student.getGender().isBlank() || student.getDistrict() == null || student.getDistrict().isBlank() || student.getCourseType() == null || student.getCourseType().isBlank() || student.getCourse().isBlank() || student.getCourse() == null || student.getSchoolName().isBlank() || student.getSchoolName() == null || student.getSchoolYear().isBlank() || student.getSchoolYear() == null || student.getStream().isBlank() || student.getStream() == null || student.getMotherName().isBlank() || student.getMotherName() == null || student.getMotherPhoneNumber().isBlank() || student.getMotherPhoneNumber() == null || student.getFatherName().isBlank() || student.getFatherName() == null || student.getFatherPhoneNumber().isBlank() || student.getFatherPhoneNumber() == null) {
-            System.out.println("Hello");
             return false;
         }
         return true;
