@@ -247,7 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     btnUpdate.style.visibility = "visible"
                     btnDelete.style.visibility = "visible"
                     studentTable.innerHTML = tblBody;
-                    console.log(res.nic);
                     firstName1.value = res.firstName
                     lastName.value = res.lastName
                     nic.value = res.nic;
@@ -275,7 +274,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         partTime.checked = true;
                     }
                     sId = res.id;
-                    console.log(sId);
                     let combo = ["ICD", "ICM", "ICP"];
                     const comboSele = document.getElementById("combo-sele");
                     for (let i = 0; i < combo.length; i++) {
@@ -445,8 +443,8 @@ const stream = document.querySelector("#combo1-sele");
 
     fetch("http://localhost:8080/student", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
+        .then(result =>alert(result))
+        .catch(error => alert(error));
 
 })
 
@@ -461,7 +459,6 @@ btnSearch.addEventListener('click', () => {
         redirect: 'follow'
     };
     let search1 = txtSearch.value;
-    console.log(search1);
     fetch(`http://localhost:8080/student/search/${txtSearch.value}`, requestOptions)
         .then(response => response.json())
         .then(res => {
@@ -476,7 +473,6 @@ btnSearch.addEventListener('click', () => {
                     `
 
             res.forEach(element => {
-                console.log(element.nic);
                 tblBody += `
      <tr>
      <td> <button class="btnsId">${element.id}</button></td>

@@ -76,8 +76,12 @@ btnReg.addEventListener("click", () => {
         .then(res => res.json())
         .then(data => {
             if (data === true) {
-                alert("ok");
-                window.open("../student.html");
+                // Swal.fire({
+                //     title: 'Your work has been saved',
+                //     // timer:100
+                //   })
+                alert("Your work has been saved");
+                window.open("../student.html","_top");
 
             } else {
                 alert("error");

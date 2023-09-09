@@ -5,7 +5,6 @@ const btnLogin = document.getElementById('btn-login');
 btnLogin.addEventListener("click", () => {
     let user = userName.value;
     let pass = password.value;
-    console.log(user, pass);
     fetch(`http://localhost:8080/admin/${user}/${pass}`)
         .then(response => response.json())
         .then(res => {
